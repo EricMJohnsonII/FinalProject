@@ -44,7 +44,7 @@
           map.setView([data.latlng[0], data.latlng[1]], 12);
       }
   }
-  function placePin(err,data){
+ /* function placePin(err,data){
       if (data.latlng) {
           L.marker([data.latlng[0], data.latlng[1]]).addTo(map);
       }
@@ -53,17 +53,18 @@
       else if (Ethnicity == 'A (Asian American)') marker = '#0000ff';
       L.marker.color = marker;
   }
-
- /* var count =0;
+**/
+ var count =0;
   function placePin(err,data) {
 
       var ethnicity=form.Data[count].Ethnicity;
 
-      if(ethnicity =="A (Asian American)"){pinColor='blue';}
-      else if(ethnicity =="C (Caucasian/European American)"){pinColor='yellow'}
-      else if(ethnicity =="MR (Multi-Racial American)"){pinColor='green'}
-      else {pinColor='#black';}
-
+      if(ethnicity =="A (Asian American)"){pinColor='#00f';}
+      else if(ethnicity =="C (Caucasian/European American)"){pinColor='#ff0';}
+      else if(ethnicity =="MR (Multi-Racial American)"){pinColor='#0f0';}
+      else if(ethnicity =="H (Hispanic/Latino American)"){pinColor='#f00';}
+      else if(ethnicity == "B (African American)"){pinColor='#f0f';}
+      else {pinColor='#000';}
 
 
       if (data.latlng) {
@@ -77,7 +78,6 @@
 
       count++;
   }
-*/
 
 </script>
 </body>
